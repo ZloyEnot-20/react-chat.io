@@ -1,0 +1,205 @@
+.chat-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.chat {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  width: 70vw;
+  height: calc(100vh - 70px);
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+.users-menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  
+background-color: #e9bcb7;
+background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  flex-grow: 0;
+}
+
+.wrapper {
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-grow: 4;
+}
+header {
+  text-align: center;
+  height: 30px;
+ background-color: #e9bcb7;
+background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+
+  font-size: 20px;
+  border-top-right-radius: 7px;
+}
+
+hr {
+  width: 90%;
+}
+
+.users-number {
+  color: #fff;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.users-in-room {
+  width: 100%;
+  height: 90%;
+  flex-grow: 5;
+}
+
+.user {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  height: auto;
+  color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 1px;
+  transition: 0.35s ease-in;
+}
+
+.user:hover {
+background-color: #ffcfdf;
+background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+  color: black;
+}
+
+.logo {
+  min-height: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.user-status {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  font-size: 0.7rem;
+}
+
+/* .name{}
+
+.status{} */
+
+.message-area {
+  width: 100%;
+  height: 80%;
+  background-image: url('image.jpg');
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-grow: 1;
+  padding-bottom: 10px;
+}
+
+.message-place {
+  display: flex;
+  margin: 5px 10px;
+}
+
+
+.msg {
+  background: linear-gradient(160deg, #a4508b 30%, #5f0a87 134%);
+  color: #fff;
+  text-align: start;
+  height: fit-content;
+  width: fit-content;
+  max-width: 50vw;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  overflow-x: hidden;
+  word-break: break-all;
+  background-color: #a4508b;
+}
+
+.time {
+  display: block;
+  font-size: 8px;
+  text-align: end;
+}
+
+
+.user-name {
+  margin: -5px 10px;
+  font-size: 0.7rem;
+}
+
+.message-area::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+.message-area::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #2de2e2;
+}
+
+.message-area::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+}
+
+.text-area {
+  display: flex;
+  justify-content: space-around;
+background-color: #e9bcb7;
+background-image: linear-gradient(15deg, #e9bcb7 0%, #29524a 74%);
+
+  padding: 0.5rem 0;
+}
+
+.btn {
+  position: relative;
+  background-color: turquoise;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 15%;
+  width: fit-content;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.messages {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  height: 30px;
+  width: 80%;
+  font-size: 20px;
+}
+
+.messages::placeholder {
+  color: #fff;
+}
