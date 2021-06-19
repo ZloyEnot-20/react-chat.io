@@ -2,8 +2,8 @@
   "name": "chat",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:9999",
-  "homepage": "http://localhost:3000",
+  "proxy": "https://boring-swirles-508b39.netlify.app/api",
+  "homepage": "https://boring-swirles-508b39.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
