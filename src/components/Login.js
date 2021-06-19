@@ -7,12 +7,12 @@ const Login = ({ state, setRoom, onLogin }) => {
   const roomId = React.useRef(null);
   const userName = React.useRef(null);
   
-  const [auth, setAuth] = React.useState(false)
+//   const [auth, setAuth] = React.useState(false)
 
   const sendData = async() => {
     
     if (roomId.current.value && userName.current.value) {
-      setAuth(prev => !prev)
+//       setAuth(prev => !prev)
       // setRoom({
       //   roomId: roomId.current.value,
       //   userName: userName.current.value,
