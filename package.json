@@ -2,7 +2,7 @@
   "name": "chat",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:9999/",
+  "proxy": "http://localhost:9999",
   "homepage": "https://boring-swirles-508b39.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
