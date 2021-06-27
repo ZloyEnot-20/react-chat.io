@@ -2,7 +2,7 @@
   "name": "chat",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://serverio.netlify.app",
+  "proxy": "http://localhost:9999",
   "homepage": "https://jgram.netlify.app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
