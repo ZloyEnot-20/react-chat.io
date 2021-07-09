@@ -29,7 +29,7 @@ const Login = ({ state, setRoom, onLogin }) => {
      };
  await axios({
       method: 'post',
-      url: 'http://localhost:8000/invoice',
+      url: 'https://server-io.herokuapp.com/users',
       data: {
         obj
       },
