@@ -27,17 +27,17 @@ const Login = ({ state, setRoom, onLogin }) => {
        roomId: roomId.current.value,
        userName: userName.current.value,
      };
- await axios({
-      method: 'post',
-      url: 'https://server-io.herokuapp.com/users',
-      data: {
-        obj
-      },
-   onLogin(obj)
-    })
-//      await axios
-//        .post('/users',obj)
-//        onLogin(obj)
+//  await axios({
+//       method: 'post',
+//       url: 'https://server-io.herokuapp.com/users',
+//       data: {
+//         obj
+//       },
+//    onLogin(obj)
+//     })
+     await axios
+       .post('https://server-io.herokuapp.com/users',obj)
+       onLogin(obj)
     }
     return false;
   };
