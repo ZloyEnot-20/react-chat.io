@@ -37,7 +37,7 @@ const Chat = ({ users, messages, userName, roomId, onAddMessage }) => {
       behavior: 'smooth',
     });
   }, [messages]);
-
+console.log(users, messages, userName, roomId)
   return (
     <div className="chat-app">
       <div className="chat">
