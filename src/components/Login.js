@@ -27,10 +27,17 @@ const Login = ({ state, setRoom, onLogin }) => {
        roomId: roomId.current.value,
        userName: userName.current.value,
      };
-
-     await axios
-       .post('/users',obj)
-       onLogin(obj)
+ await axios({
+      method: 'post',
+      url: 'http://localhost:8000/invoice',
+      data: {
+        obj
+      },
+   onLogin(obj)
+    })
+//      await axios
+//        .post('/users',obj)
+//        onLogin(obj)
     }
     return false;
   };
