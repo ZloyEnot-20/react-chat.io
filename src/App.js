@@ -14,7 +14,6 @@ function App() {
     messages: [],
   });
 
-  // const [room, setRoom] = React.useState({});
 
   const onLogin = async (obj) => {
     dispatch({
