@@ -27,6 +27,7 @@ const Login = ({ state, setRoom, onLogin }) => {
        roomId: roomId.current.value,
        userName: userName.current.value,
      };
+      console.log(obj)
 //  await axios({
 //       method: 'post',
 //       url: 'https://server-io.herokuapp.com/users',
