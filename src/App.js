@@ -44,8 +44,8 @@ const addMessage = (message) => {
 };
 
   React.useEffect(() => {
-    socket.on('ROOM:SET_USERS', setUsers);
-    socket.on('ROOM:NEW_MESSAGE', addMessage);
+    socket.on('ROOM:SET_USERS', setUsers());
+    socket.on('ROOM:NEW_MESSAGE', addMessage());
   }, []);
 
   //
