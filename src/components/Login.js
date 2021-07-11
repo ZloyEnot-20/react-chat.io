@@ -3,65 +3,46 @@ import '../components/Login.css';
 import axios from 'axios';
 
 
-const Login = ({ state, setRoom, onLogin }) => {
-  const roomId = React.useRef(null);
-  const userName = React.useRef(null);
-  
-//   const [auth, setAuth] = React.useState(false)
+const Login = ({ onLogin }) => {
+ const [roomId, setRoomId] = React.useState('');
+  const [userName, setUserName] = React.useState('');
+  const [isLoading, setLoading] = React.useState(false);
 
-  const sendData = async() => {
-    
-    if (roomId.current.value && userName.current.value) { 
-     const obj = {
-       roomId: roomId.current.value,
-       userName: userName.current.value,
-     };
-      console.log('OBJ', obj)
-
-     await axios
-       .post('https://server-io.herokuapp.com/users',obj)
-       onLogin(obj)
+  const onEnter = async () => {
+    if (!roomId || !userName) {
+      return alert('Неверные данные');
     }
-    return false;
+    const obj = {
+      roomId,
+      userName,
+    };
+    setLoading(true);
+    await axios.post('/rooms', obj);
+    onLogin(obj);
   };
 
- 
   return (
     <div className="login_wrapper">
-      <form
-        className="login_form"
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <h1>Login</h1>
-
-        <input
-          ref={roomId}
-          type="text"
-          placeholder="Room Id"
-          className="id_input"
-          required
-        />
-
-        <input
-          ref={userName}
-          type="text"
-          placeholder="Your name"
-          className="name_input"
-          required
-        />
-
-        <input
-          type="submit"
-          value='Join'
-          // disabled={auth}
-          onClick={sendData}
-          className="enter_room"
-        />
-          
-       
-      </form>
+    <form className="login_form">
+    <h1>Login</h1>
+      <input
+        type="text"
+        className="id_input"
+        placeholder="Room ID"
+        value={roomId}
+        onChange={(e) => setRoomId(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Ваше имя"
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
+        className="name_input"
+      />
+      <button disabled={isLoading} onClick={onEnter} className="enter_room">
+        {isLoading ? 'ВХОД...' : 'ВОЙТИ'}
+      </button>
+</form>
     </div>
   );
    
