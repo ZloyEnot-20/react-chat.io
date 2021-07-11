@@ -11,31 +11,13 @@ const Login = ({ state, setRoom, onLogin }) => {
 
   const sendData = async() => {
     
-    if (roomId.current.value && userName.current.value) {
-//       setAuth(prev => !prev)
-      // setRoom({
-      //   roomId: roomId.current.value,
-      //   userName: userName.current.value,
-      // });
-      // setUsers((prev) => [
-      //   ...prev,
-      //   { name: userName.current.value, status: 'Online', color: color() },
-      //   { name: 'Dinora', status: 'Busy', color: color() },
-      // ]);
-    
+    if (roomId.current.value && userName.current.value) { 
      const obj = {
        roomId: roomId.current.value,
        userName: userName.current.value,
      };
-      console.log(obj)
-//  await axios({
-//       method: 'post',
-//       url: 'https://server-io.herokuapp.com/users',
-//       data: {
-//         obj
-//       },
-//    onLogin(obj)
-//     })
+      console.log('OBJ', obj)
+
      await axios
        .post('https://server-io.herokuapp.com/users',obj)
        onLogin(obj)
