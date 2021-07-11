@@ -36,10 +36,10 @@ function App() {
     });
   };
 
-const addMessage = (message) => {
+const addMessage = (messages) => {
   dispatch({
     type: 'NEW_MESSAGE',
-    payload: message,
+    payload: messages,
   });
 };
 
