@@ -90,7 +90,7 @@ console.log(users, messages, userName, roomId)
           <header className="room-info">{roomId}</header>
 
           <div className="message-area" ref={messagesRef}>
-            {messages &&
+            {
               messages.map((item, inx) => {
                 return (
                   <Message
