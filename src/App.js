@@ -20,7 +20,7 @@ function App() {
       type: 'JOINED',
       payload: obj,
     });
-    socket.emit('ROOM:ENTER', obj);
+    socket.emit('enter', obj);
     
     const { data } = await axios.get(`https://server-io.herokuapp.com/rooms/${obj.roomId}`); 
      setUsers(data.users);
