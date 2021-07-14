@@ -21,14 +21,14 @@ function App() {
       payload: obj,
     });
     socket.emit('ROOM:JOIN', obj);
-    console.log(obj, 'obj B INO')
+    
     const { data } = await axios.get(`https://server-io.herokuapp.com/rooms/${obj.roomId}`); 
      setUsers(data.users);
       dispatch({
       type: 'SET_DATA',
       payload: data,
     });
-    
+    console.log('DATA: ,data)
   };
 
   const setUsers = (users) => {
