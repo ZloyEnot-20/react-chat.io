@@ -28,7 +28,7 @@ function App() {
       type: 'SET_DATA',
       payload: data,
     });
-    console.log('DATA: ,data)
+    console.log('DATA:' ,data)
   };
  
   const setUsers = (users) => {
