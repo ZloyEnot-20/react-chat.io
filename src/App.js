@@ -27,6 +27,7 @@ function App() {
       type: 'SET_DATA',
       payload: data,
     });
+     setUsers(data.users);
   };
 
   const setUsers = (users) => {
